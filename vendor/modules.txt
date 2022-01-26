@@ -75,6 +75,7 @@ github.com/Azure/azure-sdk-for-go/services/preview/monitor/mgmt/2021-09-01-previ
 github.com/Azure/azure-sdk-for-go/services/preview/operationsmanagement/mgmt/2015-11-01-preview/operationsmanagement
 github.com/Azure/azure-sdk-for-go/services/preview/policyinsights/mgmt/2019-10-01-preview/policyinsights
 github.com/Azure/azure-sdk-for-go/services/preview/portal/mgmt/2019-01-01-preview/portal
+github.com/Azure/azure-sdk-for-go/services/preview/quantum/mgmt/2019-11-04-preview/quantum
 github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2019-06-01-preview/templatespecs
 github.com/Azure/azure-sdk-for-go/services/preview/resources/mgmt/2021-06-01-preview/policy
 github.com/Azure/azure-sdk-for-go/services/preview/security/mgmt/v3.0/security
