@@ -1,19 +1,33 @@
 ## 2.94.0 (Unreleased)
 
+UPGRADE NOTES:
+
+* `azurerm_api_management_policy` - resources that were created with v2.92.0 will be marked as tainted due to a [bug](https://github.com/hashicorp/terraform-provider-azurerm/issues/15042). This version addresses the underlying issue, but the actual resource needs to either be untainted (via `terraform untaint`) or allow Terraform to delete the resource and create it again.
+
 FEATURES:
 
-**New Data Source:** `azurerm_linux_function_app` [GH-15009]
+* **New Data Source:** `azurerm_linux_function_app` [GH-15009]
+* **New Data Source/ Resource:** `azurerm_web_pubsub` resource and data source, and `azurerm_web_pubsub_hub` resource [GH-14731]
+* **New resource:** `azurerm_virtual_desktop_host_pool_registration_info` [GH-14134]
 
 ENHANCEMENTS:
 
 * dependencies: updating to `v61.3.0` of `github.com/Azure/azure-sdk-for-go` [GH-15080]
 * dependencies: updating to `v0.21.0` of `github.com/hashicorp/go-azure-helpers` [GH-15043]
+* dependencies: updating `kusto` to API Version `2021-08-27` [GH-15040]
+* `azurerm_app_service_slot`- Add `storage_account` block support [GH-15084]
+* `azurerm_stream_analytics_stream_input_eventhub` - Support for `partition_key` [GH-15019]
 
 BUG FIXES:
 
+* `data.image_source` - Fix regression around id [GH-15119]
+* `azurerm_api_management_backend` Fix crash around `backend_credentials` [GH-15123]
+* `azurerm_api_management_policy` - fixing the Resource ID for `api_management_policy` when this was provisioned using version `2.92.0` of the Azure Provider [GH-15060]
+* `azurerm_bastion_host` - Fix crash by adding nil check for `copy_paste_enabled` [GH-15074]
 * `azurerm_dev_test_lab` - fix the unexpected diff on `key_vault_id` [GH-15054]
 * `azurerm_subscription_cost_management_export` - fix the update method by sending the ETag when updating a cost management export [GH-15017]
 * `azurerm_template_deployment` - fixing a bug during deletion of the template deployment [GH-15085]
+* `azurerm_eventhub` - `partition_count` can now be changed when using Premium `sku` [GH-15088]
 
 ## 2.93.1 (January 24, 2022)
 
