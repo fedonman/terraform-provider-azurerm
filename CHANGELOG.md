@@ -1,9 +1,23 @@
 ## 2.95.0 (Unreleased)
 
+FEATURES: 
+
+* **New Data Source:** `azurerm_logic_app_standard` [GH-15199]
+* **New Beta Resource:** `azurerm_windows_web_app_slot` [GH-14613]
+
+ENHANCEMENTS:
+
+* dependencies: upgrading to `v0.22.0` of `github.com/hashicorp/go-azure-helpers` [GH-15207]
+* `azurerm_storage_account` - the `identity` block is no longer computed [GH-15207]
+* `azurerm_web_pubsub_hub` - `managed_identity_id` within the `auth` block now accepts UUIDs [GH-15183]
+
 BUG FIXES:
 
 * `azurerm_frontdoor` - fixing the validation for `resource_group_name` [GH-15174]
+* `azurerm_policy_definition` - fix the deprecation of `management_group_name` in favour of `management_group_id` [GH-15209]
+* `azurerm_policy_set_definition` - fix the deprecation of `management_group_name` in favour of `management_group_id` [GH-15209]
 * `azurerm_static_site` - fixing the creation of a Free tier Static Site [GH-15141]
+* `azurerm_storage_share` - fixing the `ShareBeingDeleted` error when the Storage Share is recreated [GH-15180]
 
 ## 2.94.0 (January 28, 2022)
 
